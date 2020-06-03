@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Oswald|Rubik&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html body {
+  background-color: #fff6f6;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.red-tx {
+  color: #FF5252;
+}
+
+.blue-tx {
+  color: #536DFE;
+}
+
+main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main div {
+  margin: 2rem 0;
+}
+
+main #map {
+  height: 500px;
+  width: 500px;
+  background-color: gold;
+}
+/*# sourceMappingURL=birthday.css.map */

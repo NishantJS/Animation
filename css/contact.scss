@@ -1,0 +1,299 @@
+@import "main";
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+
+    /*----Nav Bar start----*/
+    nav {
+        width: 100%;
+        padding: 0.5rem 5rem;
+        z-index: 200;
+        background-color: $body;
+        animation: show 500ms linear;
+        @include flex(space-between, center);
+
+        /*----Nav Logo start----*/
+        .logo {
+            @include flex(space-between, center);
+            flex-direction: column;
+
+            h1 {
+
+                a {
+                    color: $accent;
+                    font-family: $font3;
+                    font-size: 3rem;
+                    letter-spacing: 0.4rem;
+
+                    @at-root {
+                        .imp-tx {
+                            color: $accent2;
+                        }
+                    }
+                }
+            }
+
+            h3 {
+                color: $accent;
+                font-size: 1.3rem;
+                font-family: $font2;
+                text-transform: lowercase;
+
+                &:hover {
+                    color: $primaryDark;
+                }
+            }
+        }
+
+
+
+
+
+        /*----Ham Burger Menu start----*/
+        .ham {
+            display: none;
+            cursor: pointer;
+
+            div {
+                width: 3.5rem;
+                height: 0.5rem;
+                margin: 0.5rem 0;
+                background-color: $primary;
+                transition: all 300ms ease-in;
+
+
+                &:nth-child(2) {
+                    background-color: $accent;
+                    width: 3rem;
+                }
+            }
+
+
+        }
+
+        .close {
+
+            div {
+                transition: all 300ms ease-in;
+                margin: 0;
+
+                &:nth-child(1) {
+                    transform: translate(2px, 5px) rotate(-47.5deg);
+                }
+
+                &:nth-child(2) {
+                    width: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translate(8%, -98%) rotate(45deg);
+                }
+            }
+        }
+
+
+
+
+        .list-item {
+            width: 100%;
+
+
+            ul {
+                width: 100%;
+                @include flex(space-evenly, center);
+
+                li {
+
+                    a {
+                        position: relative;
+                        text-decoration: none;
+                        display: block;
+                        font-family: $font2;
+                        letter-spacing: 0.3rem;
+                        font-size: 1.2rem;
+                        padding: 1rem 0;
+                        color: $accent;
+                        font-weight: 900;
+                        transition: color 300ms ease-in;
+
+                        &::after,
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 0.3rem;
+                            left: 0;
+                            transform: scaleX(0);
+                            transition: all 500ms;
+                        }
+
+                        &::after {
+                            bottom: 0;
+                            background-color: $accent;
+                            transform-origin: right;
+                        }
+
+                        &::before {
+                            top: 0;
+                            background-color: $accent2;
+                            transform-origin: left;
+                        }
+
+                        &:hover {
+                            color: $accent2;
+
+                            &::after,
+                            &::before {
+                                transform: scaleX(1);
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    main {
+
+        form {
+            margin-top: 2rem;
+
+            label {
+                font-size: 1.7rem;
+            }
+
+            input {
+                padding: 1rem;
+                font-size: 1.7rem;
+                outline: none;
+                border: 0.1rem solid #999;
+                border-radius: 0.5rem;
+            }
+
+            textarea {
+                resize: none;
+                font-size: 1.7rem;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: row;
+                width: 70vw;
+                padding: 2rem;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                div+div {
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+@media(max-width: 423px) {
+    #categories {
+        a {
+            .card-body {
+                width: 80vw;
+
+                .card-cont {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 300px) {
+    #categories {
+        a {
+            .card-body {
+
+                .card-img {
+                    display: none;
+                }
+
+                .card-cont {
+                    display: block;
+                }
+
+                &:hover {
+                    .card-cont {
+                        h3 {
+                            transform: scale(1.2) translate(50%, 50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 600px) {
+    header {
+        nav {
+            display: grid;
+            padding: 0 1rem;
+            grid-template-areas: "logo ham"
+                "list-item list-item";
+            align-items: center;
+
+            .logo {
+                grid-area: logo;
+            }
+
+            .ham {
+                grid-area: ham;
+                display: block;
+            }
+
+            .list-item {
+                grid-area: list-item;
+                display: none;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        padding: 1rem;
+
+                        a {
+                            animation: show-links 300ms linear 1;
+                        }
+
+                    }
+                }
+            }
+
+
+            .block {
+                display: block;
+            }
+        }
+
+        .main {
+            flex-direction: column-reverse;
+
+            .main-body {
+                padding: 10rem 0 5rem 0;
+            }
+        }
+    }
+}

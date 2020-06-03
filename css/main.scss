@@ -1,0 +1,79 @@
+$primary: #2196F3;
+$primaryDark: #1976D2;
+$primaryLight: #BBDEFB;
+$accent: #536DFE;
+$accent2: #FF5252;
+$text: #1d1a1a;
+$inverse: #f1f1f1;
+$body: #fff6f6;
+$white: rgba($accent2, 0.05);
+$gr: linear-gradient(75deg, $accent2, $accent);
+
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Lobster|Oswald|Rubik&display=swap');
+
+
+
+$font1: 'Oswald',
+sans-serif;
+
+$font2: 'Rubik',
+sans-serif;
+
+$font3: 'Lobster',
+cursive;
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+
+    body {
+        background-color: $body;
+        font-family: $font2;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.red-tx {
+    color: $accent2;
+}
+
+.blue-tx {
+    color: $accent;
+}
+
+@mixin flex($jc, $ta) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ta;
+}

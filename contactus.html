@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventR: Contact Us</title>
+
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<body>
+
+    <header>
+        <nav id="nav">
+            <div class="logo">
+                <h1><a href="index.html">Event<span class="imp-tx">R!</span></a></h1>
+                <h3>by Nishant</h3>
+            </div>
+
+
+            <div class="ham" id="ham">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+
+
+            <div class="list-item" id="list-item">
+                <ul>
+                    <li><a href="index.html#cat" class="list-link">Categories</a></li>
+                    <li><a href="contactus.html" class="list-link">Contact Us</a></li>
+                    <li><a href="aboutus.html" class="list-link">About Us</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <main>
+            <form action="#">
+
+                <div class="name item">
+                    <div class="fname">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname">
+                    </div>
+                    <div class="lname">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" required>
+                    </div>
+                </div>
+
+                <div class="item contact">
+                    <div class="email">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="phone">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+                </div>
+
+                <div class="message item">
+                    <div class="message">
+                        <label for="msg">Message:</label>
+                        <textarea name="msg" id="msg" cols="50" rows="10" autocapitalize="sentences" autocomplete="true"
+                            spellcheck="true" required></textarea>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </header>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

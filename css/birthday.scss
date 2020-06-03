@@ -1,0 +1,17 @@
+@import "main";
+
+main {
+    min-height: 100vh;
+    @include flex(space-evenly, center);
+    flex-direction: row;
+
+    div {
+        margin: 2rem 0;
+    }
+
+    #map {
+        height: 500px;
+        width: 500px;
+        background-color: gold;
+    }
+}
