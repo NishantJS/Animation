@@ -1,3 +1,2 @@
-# CSS and JS Animations
-## This is front end only
-### I have tried to keep the design as simple as possible.
+### [Go to Live Version](https://nishantjs.github.io/Animation/)
+ 
